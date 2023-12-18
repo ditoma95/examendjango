@@ -1,0 +1,37 @@
+{% extends "accueil/index.html" %}
+{% block content %}
+    <div class="di">
+		<div class="dimi">
+			<h1>LISTES DES  TEACHERS</h1>
+      <small><h4>Nombre de teachers</h4><h1>{{ nobreteacher }}</h1></small>
+			<a href="{% url 'GesPerson:add_teacher' %}">Ajouter utilisateur</a>
+		</div>
+	
+		<table id="customers">
+		  <tr>
+		    <th>Nom</th>
+            <th>Prenom</th>
+            <th>datenaissance</th>
+            <th>telephone</th>
+            <th>email</th>
+            <th>speciality</th>
+		    <th>Update</th>
+        </tr>
+        {% for teach in recupteacher %}
+        <tr>
+            <td>{{ teach.first_name }}</td>
+            <td>{{ teach.last_name }}</td>
+            <td>{{ teach.birth_date }}</td>
+            <td>{{ teach.tel }}</td>
+            <td>{{ teach.email }}</td>
+            <td>{{ teach.speciality }}</td>
+            <td>
+                <a href="edit/{{teach.id}}">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+		</table>
+	</div>
+
+{% endblock %}
+

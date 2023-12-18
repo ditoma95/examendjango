@@ -1,0 +1,25 @@
+			Reponses aux Questions
+1) Pour créer le projet GestionPersonnel j'ai lancé la commande suivante : django-admin startproject GestionPersonnel
+
+2) Pour créer une application dans le projet : j'ai lancé la commande suivante : py manage.py startapp GesPerson
+
+3) Rappel de l'architecture d'une application django selon le pattern MVT: 
+  --M=Modèle, definit la structure des données dans la base de donnée
+  --V=Views, definit la logique et le traitement des données
+  --T=Template, Renvoie l'affichage des donnée à l'utilisateur
+  --Urls, definit les routes d'accès aux différentes vues.
+  
+4) Directive pour utiliser le serveur postgresql:
+
+DATABASES = {
+    'default': {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "Nom_de_la_base_de_donnée",
+        "USER": "Nom_d'utilisateur",
+        "PASSWORD": "Mot_de_passe_utilisateur",
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
+}
+
+5) Les 2 manières d'étendre le modèle User sans que cela modifie notre propre modèle : L'héritage et la rélation OneToOne

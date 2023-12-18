@@ -1,0 +1,61 @@
+{% extends "accueil/index.html" %}
+{% block content %}
+    <h1>Enroll teachers</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <br>
+            <p>Update details</p>
+        </div>
+
+        <div>
+            <p>Nom</p>
+            <div>
+                <input type="text" name="first_name" value="{{teachers.first_name}}">
+            </div>
+        </div>
+        <div>
+            <p>Prenom</p>
+            <div>
+                <input type="text" name="last_name" value="{{teachers.last_name}}">
+            </div>
+        </div>
+        <div>
+            <p>Teacher Name</p>
+            <div>
+                <input type="text" name="first_name" value="{{teachers.first_name}}">
+            </div>
+        </div>
+        <div>
+            <p>Date naissance</p>
+            <div>
+                <input type="text" name="birth_date" value="{{teachers.birth_date}}">
+            </div>
+        </div>
+        <div>
+            <p>Teacher Contact</p>
+            <div>
+                <input type="text" name="tel" value="{{teachers.tel}}">
+            </div>
+        </div>
+
+        <div>
+            <p>Teacher Contact</p>
+            <div>
+                <input type="text" name="email" value="{{teachers.email}}">
+            </div>
+        </div>
+
+        <div>
+            <p>Teacher Contact</p>
+            <div>
+                <input type="text" name="speciality" value="{{teachers.speciality}}">
+            </div>
+        </div>
+        <div>
+            <br>
+            <button type="submit">update</button>
+        </div>
+    </form>
+
+{% endblock %}

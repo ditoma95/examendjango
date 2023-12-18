@@ -1,0 +1,56 @@
+{% extends "accueil/index.html" %}
+{% block content %}
+    <h1>Update students</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <p>Nom</p>
+            <div>
+                <input type="text" name="first_name" value="{{students.first_name}}">
+            </div>
+        </div>
+        <div>
+            <p>Prenom</p>
+            <div>
+                <input type="text" name="last_name" value="{{students.last_name}}">
+            </div>
+        </div>
+        <div>
+            <p>Student Name</p>
+            <div>
+                <input type="text" name="first_name" value="{{students.first_name}}">
+            </div>
+        </div>
+        <div>
+            <p>Date naissance</p>
+            <div>
+                <input type="text" name="birth_date" value="{{students.birth_date}}">
+            </div>
+        </div>
+        <div>
+            <p>Student Contact</p>
+            <div>
+                <input type="text" name="tel" value="{{students.tel}}">
+            </div>
+        </div>
+
+        <div>
+            <p>Student Contact</p>
+            <div>
+                <input type="text" name="email" value="{{students.email}}">
+            </div>
+        </div>
+
+        <div>
+            <p>Student Contact</p>
+            <div>
+                <input type="text" name="pathway" value="{{students.pathway}}">
+            </div>
+        </div>
+        <div>
+            <br>
+            <button type="submit">update</button>
+        </div>
+    </form>
+
+{% endblock %}
