@@ -25,6 +25,3 @@ DATABASES = {
 5) Les 2 manières d'étendre le modèle User sans que cela modifie notre propre modèle : L'héritage et la rélation OneToOne
 
 
-python==3.10.12
-django==4.2.6
-psycopg2-binary==2.9.9
